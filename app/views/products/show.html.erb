@@ -52,13 +52,14 @@
       <% end %>
 
       <div class="form-group my-3">
-        <%= form_with url: add_to_cart_cart_path(product_id: @product.id, quantity: 1), method: :get, local: true, id: "add-to-cart-form" do |form| %>
-          <%= label_tag :quantity, "Quantité", class: "form-label" %>
-          <%= number_field_tag :quantity, 1, min: 1, class: "form-control w-50", id: "quantity-input" %>
+        <%= form_with url: add_to_cart_cart_path, method: :get, local: true, id: "add-to-cart-form" do |form| %>
+        <%= hidden_field_tag :product_id, @product.id %>
+        <%= label_tag :quantity, "Quantité", class: "form-label" %>
+        <%= number_field_tag :quantity, 1, min: 1, class: "form-control w-50", id: "quantity-input" %>
 
-          <div class="my-3">
-            <%= form.submit "Ajouter au panier", class: "btn btn-success" %>
-          </div>
+        <div class="my-3">
+          <%= form.submit "Ajouter au panier", class: "btn btn-success" %>
+        </div>
         <% end %>
       </div>
 

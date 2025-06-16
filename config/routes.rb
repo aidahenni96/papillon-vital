@@ -17,9 +17,9 @@ Rails.application.routes.draw do
 
 
 
-  resource :cart, only: [ :show ] do
-    get "add/:product_id/:quantity", to: "cart_products#add", as: :add_to_cart
-    resources :cart_products, only: [ :show, :destroy, :edit, :update ]
+  resource :cart, only: [:show] do
+    get "add", to: "cart_products#add", as: :add_to_cart
+    resources :cart_products, only: [:show, :destroy, :edit, :update]
   end
 
   resources :orders, only: [ :new, :create, :index, :show, :destroy ] do
