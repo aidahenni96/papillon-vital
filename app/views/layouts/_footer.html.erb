@@ -1,0 +1,56 @@
+<footer class="footer-luxe bg-light text-dark py-2 border-top border-2">
+  <div class="container py-2">
+    <div class="row gy-1 align-items-center justify-content-between">
+      
+      <!-- Logo + Nom -->
+      <div class="col-md-4 text-center text-md-start">
+        <div class="d-flex align-items-center gap-2 justify-content-center justify-content-md-start mb-1">
+          <%= image_tag("Ac/PapillonVital_logo.png", alt: "Logo Papillon Vital", class: "logo-footer") %>
+          <span class="fw-bold text-uppercase couleur-doree small"></span>
+        </div>
+        <p class="text-muted small mb-0">Beauté & Bien-être pour la thyroïdite d’Hashimoto</p>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="col-md-4 text-center">
+        <small class="text-uppercase fw-semibold couleur-doree d-block mb-1">Suivez-nous</small>
+        <div class="d-flex justify-content-center gap-3 fs-6">
+          <a href="https://www.facebook.com/tonprofil" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/AIDAIOANA" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" onclick="installApp()" class="social-icon" aria-label="Installer l'app"><i class="fas fa-download"></i></a>
+        </div>
+      </div>
+
+      <!-- Crédits -->
+      <div class="col-md-4 text-center text-md-end">
+        <small class="text-uppercase fw-semibold couleur-doree d-block mb-1">Crédits</small>
+        <p class="text-muted small mb-0">
+          Créé avec ❤️ par <a href="https://github.com/AIDAIOANA" class="text-decoration-underline text-dark">A&I</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Ligne séparatrice fine -->
+    <hr class="my-2 ligne-separation" style="opacity: 0.3;" />
+
+    <!-- Copyright -->
+    <div class="text-center text-muted small fst-italic mt-1">
+      © 2025 Papillon Vital — Tous droits réservés
+    </div>
+
+    <!-- Flash messages Papillon Vital -->
+    <div class="row mt-2">
+      <% if notice %>
+        <div class="alert alert-papillon-success flash-message text-center py-2 px-3 mx-auto">
+          <%= notice %>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-papillon-error flash-message text-center py-2 px-3 mx-auto">
+          <%= alert %>
+        </div>
+      <% end %>
+    </div>
+    
+    
+</footer>
