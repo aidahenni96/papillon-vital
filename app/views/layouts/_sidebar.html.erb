@@ -1,0 +1,15 @@
+<nav id="admin-sidebar" class="custom-navbar-bg p-3">
+  <ul class="navbar-nav flex-column w-100">
+    <li class="nav-item mb-2">
+      <%= link_to admin_dashboard_path, class: "nav-link text-white d-flex align-items-center" do %>
+        <i class="bi bi-speedometer2 me-2"></i> Admin Dashboard
+      <% end %>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to admin_products_path, class: "nav-link text-white d-flex align-items-center" do %>
+        <i class="bi bi-pencil-square me-2"></i> Gérer les Produits
+      <% end %>
+    </li>
+  </ul>
+</nav>
